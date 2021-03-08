@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,48 @@
 		484259822563487C00E29E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484259802563487C00E29E64 /* Main.storyboard */; };
 		484259842563487C00E29E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484259832563487C00E29E64 /* Assets.xcassets */; };
 		484259872563487C00E29E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484259852563487C00E29E64 /* LaunchScreen.storyboard */; };
+		484259922563494100E29E64 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484259912563494100E29E64 /* ScanButton.swift */; };
+		484259952563495500E29E64 /* ScanImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484259942563495500E29E64 /* ScanImageView.swift */; };
+		484259982563496900E29E64 /* OcrTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484259972563496900E29E64 /* OcrTextView.swift */; };
+		487866FC25F6B37500DEBEE6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487866FB25F6B37500DEBEE6 /* LoginVC.swift */; };
+		4878670125F6B4C300DEBEE6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878670025F6B4C300DEBEE6 /* StringExtension.swift */; };
+		4878670425F6B65F00DEBEE6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878670325F6B65F00DEBEE6 /* AlertView.swift */; };
+		4878670725F6B6D000DEBEE6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878670625F6B6D000DEBEE6 /* RegisterVC.swift */; };
+		4878671425F6BD0400DEBEE6 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671325F6BD0400DEBEE6 /* BaseVC.swift */; };
+		4878673225F6C8C600DEBEE6 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671725F6C8C400DEBEE6 /* CodableHelper.swift */; };
+		4878673325F6C8C600DEBEE6 /* UserControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671925F6C8C400DEBEE6 /* UserControllerAPI.swift */; };
+		4878673425F6C8C600DEBEE6 /* MedicineControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671A25F6C8C400DEBEE6 /* MedicineControllerAPI.swift */; };
+		4878673525F6C8C600DEBEE6 /* AccountControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671B25F6C8C400DEBEE6 /* AccountControllerAPI.swift */; };
+		4878673625F6C8C600DEBEE6 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671C25F6C8C400DEBEE6 /* AlamofireImplementations.swift */; };
+		4878673725F6C8C600DEBEE6 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671D25F6C8C400DEBEE6 /* APIs.swift */; };
+		4878673825F6C8C600DEBEE6 /* JSONEncodableEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671E25F6C8C500DEBEE6 /* JSONEncodableEncoding.swift */; };
+		4878673925F6C8C600DEBEE6 /* UserMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672025F6C8C500DEBEE6 /* UserMedicineDAO.swift */; };
+		4878673A25F6C8C600DEBEE6 /* CreateMedicineRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672125F6C8C500DEBEE6 /* CreateMedicineRequestDTO.swift */; };
+		4878673B25F6C8C600DEBEE6 /* AssignUserMedicineRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672225F6C8C500DEBEE6 /* AssignUserMedicineRequestDTO.swift */; };
+		4878673C25F6C8C600DEBEE6 /* CommonResponseOfListOfUserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672325F6C8C500DEBEE6 /* CommonResponseOfListOfUserDTO.swift */; };
+		4878673D25F6C8C600DEBEE6 /* MedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672425F6C8C500DEBEE6 /* MedicineDAO.swift */; };
+		4878673E25F6C8C600DEBEE6 /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672525F6C8C500DEBEE6 /* LoginRequestDTO.swift */; };
+		4878673F25F6C8C600DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672625F6C8C500DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift */; };
+		4878674025F6C8C600DEBEE6 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672725F6C8C500DEBEE6 /* UserDTO.swift */; };
+		4878674125F6C8C600DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672825F6C8C500DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift */; };
+		4878674225F6C8C600DEBEE6 /* CommonResponseOfUserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672925F6C8C500DEBEE6 /* CommonResponseOfUserDTO.swift */; };
+		4878674325F6C8C600DEBEE6 /* RegisterRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672A25F6C8C500DEBEE6 /* RegisterRequestDTO.swift */; };
+		4878674425F6C8C600DEBEE6 /* CommonResponseOfboolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672B25F6C8C500DEBEE6 /* CommonResponseOfboolean.swift */; };
+		4878674525F6C8C600DEBEE6 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672C25F6C8C500DEBEE6 /* JSONValue.swift */; };
+		4878674625F6C8C600DEBEE6 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672D25F6C8C500DEBEE6 /* JSONEncodingHelper.swift */; };
+		4878674725F6C8C600DEBEE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672E25F6C8C500DEBEE6 /* Extensions.swift */; };
+		4878674825F6C8C600DEBEE6 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672F25F6C8C600DEBEE6 /* APIHelper.swift */; };
+		4878674925F6C8C600DEBEE6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878673025F6C8C600DEBEE6 /* Models.swift */; };
+		4878674A25F6C8C600DEBEE6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878673125F6C8C600DEBEE6 /* Configuration.swift */; };
+		4878674E25F6C92300DEBEE6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878674D25F6C92300DEBEE6 /* UserManager.swift */; };
+		4878675125F6C97600DEBEE6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878675025F6C97600DEBEE6 /* Constant.swift */; };
+		4878675525F6CAD700DEBEE6 /* MedicineListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878675425F6CAD700DEBEE6 /* MedicineListVC.swift */; };
+		4878676125F6CC9C00DEBEE6 /* MedicineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878676025F6CC9C00DEBEE6 /* MedicineCell.swift */; };
+		891C67F12C79062F919D09F8 /* Pods_OCRProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B063925F5683D413C650DC44 /* Pods_OCRProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EAB1C511C84F768A8B115D6 /* Pods-OCRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRProject.debug.xcconfig"; path = "Target Support Files/Pods-OCRProject/Pods-OCRProject.debug.xcconfig"; sourceTree = "<group>"; };
 		484259772563487C00E29E64 /* OCRProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4842597A2563487C00E29E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4842597C2563487C00E29E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +63,45 @@
 		484259832563487C00E29E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484259862563487C00E29E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484259882563487C00E29E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484259912563494100E29E64 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
+		484259942563495500E29E64 /* ScanImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImageView.swift; sourceTree = "<group>"; };
+		484259972563496900E29E64 /* OcrTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcrTextView.swift; sourceTree = "<group>"; };
+		487866FB25F6B37500DEBEE6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4878670025F6B4C300DEBEE6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4878670325F6B65F00DEBEE6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		4878670625F6B6D000DEBEE6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		4878671325F6BD0400DEBEE6 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		4878671725F6C8C400DEBEE6 /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
+		4878671925F6C8C400DEBEE6 /* UserControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserControllerAPI.swift; sourceTree = "<group>"; };
+		4878671A25F6C8C400DEBEE6 /* MedicineControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineControllerAPI.swift; sourceTree = "<group>"; };
+		4878671B25F6C8C400DEBEE6 /* AccountControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountControllerAPI.swift; sourceTree = "<group>"; };
+		4878671C25F6C8C400DEBEE6 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
+		4878671D25F6C8C400DEBEE6 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		4878671E25F6C8C500DEBEE6 /* JSONEncodableEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodableEncoding.swift; sourceTree = "<group>"; };
+		4878672025F6C8C500DEBEE6 /* UserMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMedicineDAO.swift; sourceTree = "<group>"; };
+		4878672125F6C8C500DEBEE6 /* CreateMedicineRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMedicineRequestDTO.swift; sourceTree = "<group>"; };
+		4878672225F6C8C500DEBEE6 /* AssignUserMedicineRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignUserMedicineRequestDTO.swift; sourceTree = "<group>"; };
+		4878672325F6C8C500DEBEE6 /* CommonResponseOfListOfUserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfUserDTO.swift; sourceTree = "<group>"; };
+		4878672425F6C8C500DEBEE6 /* MedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDAO.swift; sourceTree = "<group>"; };
+		4878672525F6C8C500DEBEE6 /* LoginRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
+		4878672625F6C8C500DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfUserMedicineDAO.swift; sourceTree = "<group>"; };
+		4878672725F6C8C500DEBEE6 /* UserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		4878672825F6C8C500DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfMedicineDAO.swift; sourceTree = "<group>"; };
+		4878672925F6C8C500DEBEE6 /* CommonResponseOfUserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfUserDTO.swift; sourceTree = "<group>"; };
+		4878672A25F6C8C500DEBEE6 /* RegisterRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequestDTO.swift; sourceTree = "<group>"; };
+		4878672B25F6C8C500DEBEE6 /* CommonResponseOfboolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfboolean.swift; sourceTree = "<group>"; };
+		4878672C25F6C8C500DEBEE6 /* JSONValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
+		4878672D25F6C8C500DEBEE6 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
+		4878672E25F6C8C500DEBEE6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4878672F25F6C8C600DEBEE6 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		4878673025F6C8C600DEBEE6 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4878673125F6C8C600DEBEE6 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4878674D25F6C92300DEBEE6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		4878675025F6C97600DEBEE6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4878675425F6CAD700DEBEE6 /* MedicineListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineListVC.swift; sourceTree = "<group>"; };
+		4878676025F6CC9C00DEBEE6 /* MedicineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCell.swift; sourceTree = "<group>"; };
+		B063925F5683D413C650DC44 /* Pods_OCRProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC4B60744C07D710C926DD7 /* Pods-OCRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRProject.release.xcconfig"; path = "Target Support Files/Pods-OCRProject/Pods-OCRProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +109,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891C67F12C79062F919D09F8 /* Pods_OCRProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30E8BA4B1FDFBE4CE5F7855D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EAB1C511C84F768A8B115D6 /* Pods-OCRProject.debug.xcconfig */,
+				DAC4B60744C07D710C926DD7 /* Pods-OCRProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4842596E2563487C00E29E64 = {
 			isa = PBXGroup;
 			children = (
 				484259792563487C00E29E64 /* OCRProject */,
 				484259782563487C00E29E64 /* Products */,
+				30E8BA4B1FDFBE4CE5F7855D /* Pods */,
+				75054D40BA8959C9A85186CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +146,148 @@
 		484259792563487C00E29E64 /* OCRProject */ = {
 			isa = PBXGroup;
 			children = (
-				4842597A2563487C00E29E64 /* AppDelegate.swift */,
-				4842597C2563487C00E29E64 /* SceneDelegate.swift */,
-				4842597E2563487C00E29E64 /* ViewController.swift */,
+				487866FE25F6B45D00DEBEE6 /* Helper */,
+				487866C825F6B28C00DEBEE6 /* Network */,
+				484259902563493500E29E64 /* Component */,
+				487866FA25F6B36400DEBEE6 /* VC */,
 				484259802563487C00E29E64 /* Main.storyboard */,
+				4842597C2563487C00E29E64 /* SceneDelegate.swift */,
+				4842597A2563487C00E29E64 /* AppDelegate.swift */,
 				484259832563487C00E29E64 /* Assets.xcassets */,
 				484259852563487C00E29E64 /* LaunchScreen.storyboard */,
 				484259882563487C00E29E64 /* Info.plist */,
 			);
 			path = OCRProject;
+			sourceTree = "<group>";
+		};
+		484259902563493500E29E64 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				484259912563494100E29E64 /* ScanButton.swift */,
+				484259942563495500E29E64 /* ScanImageView.swift */,
+				484259972563496900E29E64 /* OcrTextView.swift */,
+				4878670325F6B65F00DEBEE6 /* AlertView.swift */,
+				4878671325F6BD0400DEBEE6 /* BaseVC.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		487866C825F6B28C00DEBEE6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4878671C25F6C8C400DEBEE6 /* AlamofireImplementations.swift */,
+				4878672F25F6C8C600DEBEE6 /* APIHelper.swift */,
+				4878671825F6C8C400DEBEE6 /* APIs */,
+				4878671D25F6C8C400DEBEE6 /* APIs.swift */,
+				4878671725F6C8C400DEBEE6 /* CodableHelper.swift */,
+				4878673125F6C8C600DEBEE6 /* Configuration.swift */,
+				4878672E25F6C8C500DEBEE6 /* Extensions.swift */,
+				4878671E25F6C8C500DEBEE6 /* JSONEncodableEncoding.swift */,
+				4878672D25F6C8C500DEBEE6 /* JSONEncodingHelper.swift */,
+				4878672C25F6C8C500DEBEE6 /* JSONValue.swift */,
+				4878671F25F6C8C500DEBEE6 /* Models */,
+				4878673025F6C8C600DEBEE6 /* Models.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		487866FA25F6B36400DEBEE6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4878675325F6CA6300DEBEE6 /* Auth */,
+				4842597E2563487C00E29E64 /* ViewController.swift */,
+				4878675D25F6CC8B00DEBEE6 /* Medicine */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		487866FE25F6B45D00DEBEE6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4878674C25F6C91800DEBEE6 /* Manager */,
+				487866FF25F6B4B700DEBEE6 /* Extension */,
+				4878675025F6C97600DEBEE6 /* Constant.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		487866FF25F6B4B700DEBEE6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4878670025F6B4C300DEBEE6 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4878671825F6C8C400DEBEE6 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				4878671925F6C8C400DEBEE6 /* UserControllerAPI.swift */,
+				4878671A25F6C8C400DEBEE6 /* MedicineControllerAPI.swift */,
+				4878671B25F6C8C400DEBEE6 /* AccountControllerAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		4878671F25F6C8C500DEBEE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4878672025F6C8C500DEBEE6 /* UserMedicineDAO.swift */,
+				4878672125F6C8C500DEBEE6 /* CreateMedicineRequestDTO.swift */,
+				4878672225F6C8C500DEBEE6 /* AssignUserMedicineRequestDTO.swift */,
+				4878672325F6C8C500DEBEE6 /* CommonResponseOfListOfUserDTO.swift */,
+				4878672425F6C8C500DEBEE6 /* MedicineDAO.swift */,
+				4878672525F6C8C500DEBEE6 /* LoginRequestDTO.swift */,
+				4878672625F6C8C500DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift */,
+				4878672725F6C8C500DEBEE6 /* UserDTO.swift */,
+				4878672825F6C8C500DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift */,
+				4878672925F6C8C500DEBEE6 /* CommonResponseOfUserDTO.swift */,
+				4878672A25F6C8C500DEBEE6 /* RegisterRequestDTO.swift */,
+				4878672B25F6C8C500DEBEE6 /* CommonResponseOfboolean.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4878674C25F6C91800DEBEE6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4878674D25F6C92300DEBEE6 /* UserManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4878675325F6CA6300DEBEE6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				487866FB25F6B37500DEBEE6 /* LoginVC.swift */,
+				4878670625F6B6D000DEBEE6 /* RegisterVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4878675D25F6CC8B00DEBEE6 /* Medicine */ = {
+			isa = PBXGroup;
+			children = (
+				4878675425F6CAD700DEBEE6 /* MedicineListVC.swift */,
+				4878675F25F6CC9000DEBEE6 /* Cell */,
+			);
+			path = Medicine;
+			sourceTree = "<group>";
+		};
+		4878675F25F6CC9000DEBEE6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4878676025F6CC9C00DEBEE6 /* MedicineCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		75054D40BA8959C9A85186CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B063925F5683D413C650DC44 /* Pods_OCRProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +297,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4842598B2563487C00E29E64 /* Build configuration list for PBXNativeTarget "OCRProject" */;
 			buildPhases = (
+				20AB26C24E0AB400FF2C0748 /* [CP] Check Pods Manifest.lock */,
 				484259732563487C00E29E64 /* Sources */,
 				484259742563487C00E29E64 /* Frameworks */,
 				484259752563487C00E29E64 /* Resources */,
+				D7B1C61643FB29D0BBCDB02D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +357,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20AB26C24E0AB400FF2C0748 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCRProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7B1C61643FB29D0BBCDB02D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCRProject/Pods-OCRProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCRProject/Pods-OCRProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCRProject/Pods-OCRProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		484259732563487C00E29E64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4878673825F6C8C600DEBEE6 /* JSONEncodableEncoding.swift in Sources */,
+				4878673425F6C8C600DEBEE6 /* MedicineControllerAPI.swift in Sources */,
+				4878673F25F6C8C600DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift in Sources */,
+				4878676125F6CC9C00DEBEE6 /* MedicineCell.swift in Sources */,
+				484259922563494100E29E64 /* ScanButton.swift in Sources */,
+				4878673625F6C8C600DEBEE6 /* AlamofireImplementations.swift in Sources */,
+				4878671425F6BD0400DEBEE6 /* BaseVC.swift in Sources */,
+				4878670125F6B4C300DEBEE6 /* StringExtension.swift in Sources */,
+				4878670725F6B6D000DEBEE6 /* RegisterVC.swift in Sources */,
+				4878674825F6C8C600DEBEE6 /* APIHelper.swift in Sources */,
+				4878673225F6C8C600DEBEE6 /* CodableHelper.swift in Sources */,
+				4878674425F6C8C600DEBEE6 /* CommonResponseOfboolean.swift in Sources */,
 				4842597F2563487C00E29E64 /* ViewController.swift in Sources */,
+				4878673E25F6C8C600DEBEE6 /* LoginRequestDTO.swift in Sources */,
 				4842597B2563487C00E29E64 /* AppDelegate.swift in Sources */,
+				4878673C25F6C8C600DEBEE6 /* CommonResponseOfListOfUserDTO.swift in Sources */,
+				4878673525F6C8C600DEBEE6 /* AccountControllerAPI.swift in Sources */,
+				484259952563495500E29E64 /* ScanImageView.swift in Sources */,
+				4878675525F6CAD700DEBEE6 /* MedicineListVC.swift in Sources */,
+				4878674525F6C8C600DEBEE6 /* JSONValue.swift in Sources */,
+				4878674E25F6C92300DEBEE6 /* UserManager.swift in Sources */,
+				4878673325F6C8C600DEBEE6 /* UserControllerAPI.swift in Sources */,
+				484259982563496900E29E64 /* OcrTextView.swift in Sources */,
+				4878673925F6C8C600DEBEE6 /* UserMedicineDAO.swift in Sources */,
+				4878674625F6C8C600DEBEE6 /* JSONEncodingHelper.swift in Sources */,
+				4878674025F6C8C600DEBEE6 /* UserDTO.swift in Sources */,
+				4878674225F6C8C600DEBEE6 /* CommonResponseOfUserDTO.swift in Sources */,
+				4878674125F6C8C600DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */,
+				487866FC25F6B37500DEBEE6 /* LoginVC.swift in Sources */,
+				4878675125F6C97600DEBEE6 /* Constant.swift in Sources */,
+				4878670425F6B65F00DEBEE6 /* AlertView.swift in Sources */,
+				4878673725F6C8C600DEBEE6 /* APIs.swift in Sources */,
 				4842597D2563487C00E29E64 /* SceneDelegate.swift in Sources */,
+				4878673A25F6C8C600DEBEE6 /* CreateMedicineRequestDTO.swift in Sources */,
+				4878674A25F6C8C600DEBEE6 /* Configuration.swift in Sources */,
+				4878673D25F6C8C600DEBEE6 /* MedicineDAO.swift in Sources */,
+				4878673B25F6C8C600DEBEE6 /* AssignUserMedicineRequestDTO.swift in Sources */,
+				4878674725F6C8C600DEBEE6 /* Extensions.swift in Sources */,
+				4878674325F6C8C600DEBEE6 /* RegisterRequestDTO.swift in Sources */,
+				4878674925F6C8C600DEBEE6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +587,7 @@
 		};
 		4842598C2563487C00E29E64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EAB1C511C84F768A8B115D6 /* Pods-OCRProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +607,7 @@
 		};
 		4842598D2563487C00E29E64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAC4B60744C07D710C926DD7 /* Pods-OCRProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

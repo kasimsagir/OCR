@@ -52,8 +52,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -62,5 +60,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>İlaç isimlerini okuyabilmek için. Daha sonra Ayarlar&apos;dan değiştirilebilir.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Ses tanıma için kullanılacaktır. Daha sonra Ayarlar&apos;dan değiştirilebilir.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Ses tanıma için kullanılacaktır. Daha sonra Ayarlar&apos;dan değiştirilebilir.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
