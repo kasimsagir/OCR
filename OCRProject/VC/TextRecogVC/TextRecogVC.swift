@@ -53,21 +53,6 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
             }
             
         }
-        
-//        let result = observations.map({$0 as? VNTextObservation})
-//
-//        DispatchQueue.main.async() {
-//            self.previewView.layer.sublayers?.removeSubrange(1...)
-//            for region in result {
-//                guard let rg = region else {continue}
-//                self.drawRegionBox(box: rg)
-//                if let boxes = region?.characterBoxes {
-//                    for characterBox in boxes {
-//                        self.drawTextBox(box: characterBox)
-//                    }
-//                }
-//            }
-//        }
     }
     
     // MARK: - Draw

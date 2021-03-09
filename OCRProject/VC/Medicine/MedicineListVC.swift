@@ -44,23 +44,34 @@ class MedicineListVC: BaseVC {
 // MARK: - TableView Delegate & DataSource
 extension MedicineListVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return medicineList.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let medicine = medicineList[section]
+        return 1+(medicine.repeatDaily*medicine.repeatDay)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicineCell") as! MedicineCell
-        cell.setMedicine(medicineList[indexPath.row])
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MedicineCell") as! MedicineCell
+            cell.setMedicine(medicineList[indexPath.section])
+            return cell
+        }else {
+            let cell = UITableViewCell()
+            let index = indexPath.row+1
+            let medicine = medicineList[indexPath.section]
+            let day = index/medicine.repeatDay
+            let count = index - (day*medicine.repeatDay) + 1
+            
+            cell.accessoryType = indexPath.row == 1 ? .checkmark : .disclosureIndicator
+            cell.textLabel?.text = "\(day). günün \(count) ilacı"
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TextRecogVC") as! TextRecogVC
-        vc.medicine = medicineList[indexPath.row].medicineDAO
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigateToOCR(medicineList[indexPath.section].medicineDAO)
     }
 }
 
@@ -147,15 +158,16 @@ extension MedicineListVC {
     
     func checkForColorsSaid(resultString: String) {
         print("SONUÇ: \(resultString)")
-        if resultString == "yeni ilaç" {
-            print("TODO - Live OCR")
+        if resultString == "yeni" {
+            cancelRecording()
+            navigateToOCR()
         }
         let selectedMedicine = medicineList.filter { (medicine) -> Bool in
             return medicine.medicineDAO.name?.lowercased() == resultString.lowercased()
         }
         if selectedMedicine.count != 0 {
             cancelRecording()
-            print("TODO - Live OCR with selectedMedicine.first")
+            navigateToOCR(selectedMedicine.first?.medicineDAO)
         }
     }
     
@@ -190,5 +202,14 @@ extension MedicineListVC {
                 }
             }
         }
+    }
+}
+
+//MARK: - Helper
+extension MedicineListVC {
+    func navigateToOCR(_ medicine: MedicineDAO? = nil){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TextRecogVC") as! TextRecogVC
+        vc.medicine = medicine
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
