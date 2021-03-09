@@ -128,7 +128,7 @@ open class AlamofireRequestBuilder<T>: RequestBuilder<T> {
         case is String.Type:
             validatedRequest.responseString(completionHandler: { (stringResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: stringResponse)
                 if stringResponse.result.isFailure {
                     completion(
                         nil,
@@ -148,7 +148,7 @@ open class AlamofireRequestBuilder<T>: RequestBuilder<T> {
         case is URL.Type:
             validatedRequest.responseData(completionHandler: { (dataResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: dataResponse)
                 do {
 
                     guard !dataResponse.result.isFailure else {
@@ -198,7 +198,7 @@ open class AlamofireRequestBuilder<T>: RequestBuilder<T> {
         case is Void.Type:
             validatedRequest.responseData(completionHandler: { (voidResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: voidResponse)
                 if voidResponse.result.isFailure {
                     completion(
                         nil,
@@ -217,7 +217,7 @@ open class AlamofireRequestBuilder<T>: RequestBuilder<T> {
         default:
             validatedRequest.responseData(completionHandler: { (dataResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: dataResponse)
                 if dataResponse.result.isFailure {
                     completion(
                         nil,
@@ -332,7 +332,7 @@ open class AlamofireDecodableRequestBuilder<T:Decodable>: AlamofireRequestBuilde
         case is String.Type:
             validatedRequest.responseString(completionHandler: { (stringResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: stringResponse)
                 if stringResponse.result.isFailure {
                     completion(
                         nil,
@@ -352,7 +352,7 @@ open class AlamofireDecodableRequestBuilder<T:Decodable>: AlamofireRequestBuilde
         case is Void.Type:
             validatedRequest.responseData(completionHandler: { (voidResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: voidResponse)
                 if voidResponse.result.isFailure {
                     completion(
                         nil,
@@ -371,7 +371,7 @@ open class AlamofireDecodableRequestBuilder<T:Decodable>: AlamofireRequestBuilde
         case is Data.Type:
             validatedRequest.responseData(completionHandler: { (dataResponse) in
                 cleanupRequest()
-
+                self.logRequest(response: dataResponse)
                 if dataResponse.result.isFailure {
                     completion(
                         nil,
@@ -391,7 +391,7 @@ open class AlamofireDecodableRequestBuilder<T:Decodable>: AlamofireRequestBuilde
         default:
             validatedRequest.responseData(completionHandler: { (dataResponse: DataResponse<Data>) in
                 cleanupRequest()
-
+                self.logRequest(response: dataResponse)
                 guard dataResponse.result.isSuccess else {
                     completion(nil, ErrorResponse.error(dataResponse.response?.statusCode ?? 500, dataResponse.data, dataResponse.result.error!))
                     return
@@ -419,4 +419,22 @@ open class AlamofireDecodableRequestBuilder<T:Decodable>: AlamofireRequestBuilde
         }
     }
 
+}
+
+extension AlamofireRequestBuilder {
+    func logRequest(response: DataResponse<String>?){
+        if let response = response {
+            print("\n\n✅ ✅ ✅ ✅ ✅\n\nLDSLOG Success: \n[\(response.request?.httpMethod ?? "") \(response.response?.statusCode ?? 0)]\nURL: \n\(response.request?.url?.absoluteString ?? "")\nHeader: \n\(response.request?.allHTTPHeaderFields ?? [:]) \nBody: \n\(String(describing: response.request?.httpBody)) \n ✅ ✅ ✅ ✅ ✅\n\nResponse: (\(response.request?.url?.absoluteString ?? ""))\n\(response.data?.prettyPrintedJSONString ?? "")\n\n✅ ✅ ✅ ✅ ✅")
+            print("----ERROR: \(String(describing: response.error?.localizedDescription))----")
+        }
+        
+    }
+    
+    func logRequest(response: DataResponse<Data>?){
+        if let response = response {
+            print("\n\n✅ ✅ ✅ ✅ ✅\n\nLDSLOG Success: \n[\(response.request?.httpMethod ?? "") \(response.response?.statusCode ?? 0)]\nURL: \n\(response.request?.url?.absoluteString ?? "")\nHeader: \n\(response.request?.allHTTPHeaderFields ?? [:]) \nBody: \n\(String(describing: response.request?.httpBody)) \n ✅ ✅ ✅ ✅ ✅\n\nResponse: (\(response.request?.url?.absoluteString ?? ""))\n\(response.data?.prettyPrintedJSONString ?? "")\n\n✅ ✅ ✅ ✅ ✅")
+            print("----ERROR: \(String(describing: response.error?.localizedDescription))----")
+        }
+        
+    }
 }

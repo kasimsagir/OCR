@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480D15EB25F7C67100977E95 /* TextRecogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D15EA25F7C67100977E95 /* TextRecogVC.swift */; };
+		480D15EE25F7C68900977E95 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D15ED25F7C68900977E95 /* PreviewView.swift */; };
 		4842597B2563487C00E29E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842597A2563487C00E29E64 /* AppDelegate.swift */; };
-		4842597D2563487C00E29E64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842597C2563487C00E29E64 /* SceneDelegate.swift */; };
 		4842597F2563487C00E29E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842597E2563487C00E29E64 /* ViewController.swift */; };
 		484259822563487C00E29E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484259802563487C00E29E64 /* Main.storyboard */; };
 		484259842563487C00E29E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484259832563487C00E29E64 /* Assets.xcassets */; };
@@ -50,14 +51,17 @@
 		4878675125F6C97600DEBEE6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878675025F6C97600DEBEE6 /* Constant.swift */; };
 		4878675525F6CAD700DEBEE6 /* MedicineListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878675425F6CAD700DEBEE6 /* MedicineListVC.swift */; };
 		4878676125F6CC9C00DEBEE6 /* MedicineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878676025F6CC9C00DEBEE6 /* MedicineCell.swift */; };
+		4878676C25F6D13300DEBEE6 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878676B25F6D13300DEBEE6 /* TableViewExtension.swift */; };
+		4878676F25F6D4C100DEBEE6 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878676E25F6D4C100DEBEE6 /* DataExtension.swift */; };
 		891C67F12C79062F919D09F8 /* Pods_OCRProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B063925F5683D413C650DC44 /* Pods_OCRProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EAB1C511C84F768A8B115D6 /* Pods-OCRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRProject.debug.xcconfig"; path = "Target Support Files/Pods-OCRProject/Pods-OCRProject.debug.xcconfig"; sourceTree = "<group>"; };
+		480D15EA25F7C67100977E95 /* TextRecogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecogVC.swift; sourceTree = "<group>"; };
+		480D15ED25F7C68900977E95 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		484259772563487C00E29E64 /* OCRProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4842597A2563487C00E29E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4842597C2563487C00E29E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4842597E2563487C00E29E64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		484259812563487C00E29E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		484259832563487C00E29E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		4878675025F6C97600DEBEE6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4878675425F6CAD700DEBEE6 /* MedicineListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineListVC.swift; sourceTree = "<group>"; };
 		4878676025F6CC9C00DEBEE6 /* MedicineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCell.swift; sourceTree = "<group>"; };
+		4878676B25F6D13300DEBEE6 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		4878676E25F6D4C100DEBEE6 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		B063925F5683D413C650DC44 /* Pods_OCRProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC4B60744C07D710C926DD7 /* Pods-OCRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRProject.release.xcconfig"; path = "Target Support Files/Pods-OCRProject/Pods-OCRProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +129,14 @@
 				DAC4B60744C07D710C926DD7 /* Pods-OCRProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		480D15E925F7C65C00977E95 /* TextRecogVC */ = {
+			isa = PBXGroup;
+			children = (
+				480D15EA25F7C67100977E95 /* TextRecogVC.swift */,
+			);
+			path = TextRecogVC;
 			sourceTree = "<group>";
 		};
 		4842596E2563487C00E29E64 = {
@@ -151,7 +165,6 @@
 				484259902563493500E29E64 /* Component */,
 				487866FA25F6B36400DEBEE6 /* VC */,
 				484259802563487C00E29E64 /* Main.storyboard */,
-				4842597C2563487C00E29E64 /* SceneDelegate.swift */,
 				4842597A2563487C00E29E64 /* AppDelegate.swift */,
 				484259832563487C00E29E64 /* Assets.xcassets */,
 				484259852563487C00E29E64 /* LaunchScreen.storyboard */,
@@ -194,6 +207,7 @@
 		487866FA25F6B36400DEBEE6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				480D15E925F7C65C00977E95 /* TextRecogVC */,
 				4878675325F6CA6300DEBEE6 /* Auth */,
 				4842597E2563487C00E29E64 /* ViewController.swift */,
 				4878675D25F6CC8B00DEBEE6 /* Medicine */,
@@ -204,6 +218,7 @@
 		487866FE25F6B45D00DEBEE6 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				480D15ED25F7C68900977E95 /* PreviewView.swift */,
 				4878674C25F6C91800DEBEE6 /* Manager */,
 				487866FF25F6B4B700DEBEE6 /* Extension */,
 				4878675025F6C97600DEBEE6 /* Constant.swift */,
@@ -215,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				4878670025F6B4C300DEBEE6 /* StringExtension.swift */,
+				4878676B25F6D13300DEBEE6 /* TableViewExtension.swift */,
+				4878676E25F6D4C100DEBEE6 /* DataExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -411,6 +428,7 @@
 				484259922563494100E29E64 /* ScanButton.swift in Sources */,
 				4878673625F6C8C600DEBEE6 /* AlamofireImplementations.swift in Sources */,
 				4878671425F6BD0400DEBEE6 /* BaseVC.swift in Sources */,
+				480D15EE25F7C68900977E95 /* PreviewView.swift in Sources */,
 				4878670125F6B4C300DEBEE6 /* StringExtension.swift in Sources */,
 				4878670725F6B6D000DEBEE6 /* RegisterVC.swift in Sources */,
 				4878674825F6C8C600DEBEE6 /* APIHelper.swift in Sources */,
@@ -426,17 +444,19 @@
 				4878674525F6C8C600DEBEE6 /* JSONValue.swift in Sources */,
 				4878674E25F6C92300DEBEE6 /* UserManager.swift in Sources */,
 				4878673325F6C8C600DEBEE6 /* UserControllerAPI.swift in Sources */,
+				4878676C25F6D13300DEBEE6 /* TableViewExtension.swift in Sources */,
 				484259982563496900E29E64 /* OcrTextView.swift in Sources */,
 				4878673925F6C8C600DEBEE6 /* UserMedicineDAO.swift in Sources */,
+				4878676F25F6D4C100DEBEE6 /* DataExtension.swift in Sources */,
 				4878674625F6C8C600DEBEE6 /* JSONEncodingHelper.swift in Sources */,
 				4878674025F6C8C600DEBEE6 /* UserDTO.swift in Sources */,
+				480D15EB25F7C67100977E95 /* TextRecogVC.swift in Sources */,
 				4878674225F6C8C600DEBEE6 /* CommonResponseOfUserDTO.swift in Sources */,
 				4878674125F6C8C600DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */,
 				487866FC25F6B37500DEBEE6 /* LoginVC.swift in Sources */,
 				4878675125F6C97600DEBEE6 /* Constant.swift in Sources */,
 				4878670425F6B65F00DEBEE6 /* AlertView.swift in Sources */,
 				4878673725F6C8C600DEBEE6 /* APIs.swift in Sources */,
-				4842597D2563487C00E29E64 /* SceneDelegate.swift in Sources */,
 				4878673A25F6C8C600DEBEE6 /* CreateMedicineRequestDTO.swift in Sources */,
 				4878674A25F6C8C600DEBEE6 /* Configuration.swift in Sources */,
 				4878673D25F6C8C600DEBEE6 /* MedicineDAO.swift in Sources */,
@@ -594,6 +614,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YH9484UXC5;
 				INFOPLIST_FILE = OCRProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ks.OCRProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -614,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YH9484UXC5;
 				INFOPLIST_FILE = OCRProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ks.OCRProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

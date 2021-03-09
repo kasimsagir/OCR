@@ -14,6 +14,11 @@ class LoginVC: BaseVC {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
+    override func viewDidLoad() {
+        if UserManager.shared.savedToken != "" {
+            navigateToMedicineList()
+        }
+    }
 }
 
 // MARK: - Button Actions
@@ -43,12 +48,20 @@ extension LoginVC {
                 UserManager.shared.saveUser(user?.data?._id ?? "",
                                             user?.data?.email ?? "",
                                             user?.data?.name ?? "",
-                                            user?.data?.surname ?? "")
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "MedicineListVC") as! MedicineListVC
-                self.navigationController?.setViewControllers([vc], animated: true)
+                                            user?.data?.surname ?? "",
+                                            user?.data?.authorizationKey ?? "")
+                navigateToMedicineList()
             }else {
                 AlertView.show(in: self, title: "Uyarı", message: "Bir hata oluştu. \(error?.localizedDescription ?? "")")
             }
         }
+    }
+}
+
+// MARK: - Helper
+extension LoginVC {
+    func navigateToMedicineList(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MedicineListVC") as! MedicineListVC
+        self.navigationController?.setViewControllers([vc], animated: true)
     }
 }

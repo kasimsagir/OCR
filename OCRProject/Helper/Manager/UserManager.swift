@@ -99,10 +99,11 @@ extension UserManager {
         UserDefaults.standard.set(companyValue, forKey: Constants.UserDefaults.savedCompanyValue)
     }
     
-    func saveUser(_ userId: String, _ email: String, _ name: String, _ surname: String){
+    func saveUser(_ userId: String, _ email: String, _ name: String, _ surname: String, _ token: String){
         saveUserId(userId)
         saveEmail(email)
         saveName(name)
         saveSurname(surname)
+        saveToken(token)
     }
 }
