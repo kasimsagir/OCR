@@ -49,6 +49,80 @@ open class MedicineControllerAPI {
     }
 
     /**
+     addUserMedicines
+     
+     - parameter _id: (path) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func addUserMedicinesUsingDELETE(_id: String, completion: @escaping ((_ data: CommonResponseOfboolean?,_ error: Error?) -> Void)) {
+        addUserMedicinesUsingDELETEWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     addUserMedicines
+     - DELETE /medicines/{id}
+     - API Key:
+       - type: apiKey Authorization 
+       - name: JWT
+     - examples: [{output=none}]
+     
+     - parameter _id: (path) id 
+
+     - returns: RequestBuilder<CommonResponseOfboolean> 
+     */
+    open class func addUserMedicinesUsingDELETEWithRequestBuilder(_id: String) -> RequestBuilder<CommonResponseOfboolean> {
+        var path = "/medicines/{id}"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonResponseOfboolean>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
+     getLogs
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLogsUsingGET(completion: @escaping ((_ data: CommonResponseOfListOfLogData?,_ error: Error?) -> Void)) {
+        getLogsUsingGETWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     getLogs
+     - GET /medicines/logs
+     - API Key:
+       - type: apiKey Authorization 
+       - name: JWT
+     - examples: [{output=none}]
+
+     - returns: RequestBuilder<CommonResponseOfListOfLogData> 
+     */
+    open class func getLogsUsingGETWithRequestBuilder() -> RequestBuilder<CommonResponseOfListOfLogData> {
+        let path = "/medicines/logs"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonResponseOfListOfLogData>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      getMedicines
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -80,6 +154,54 @@ open class MedicineControllerAPI {
         let requestBuilder: RequestBuilder<CommonResponseOfListOfMedicineDAO>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
+     useMedicine
+     
+     - parameter date: (query) date 
+     - parameter _id: (path) id 
+     - parameter isLog: (query) isLog 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func useMedicineUsingPUT(date: String, _id: String, isLog: Bool, completion: @escaping ((_ data: CommonResponseOfboolean?,_ error: Error?) -> Void)) {
+        useMedicineUsingPUTWithRequestBuilder(date: date, _id: _id, isLog: isLog).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     useMedicine
+     - PUT /medicines/{id}
+     - API Key:
+       - type: apiKey Authorization 
+       - name: JWT
+     - examples: [{output=none}]
+     
+     - parameter date: (query) date 
+     - parameter _id: (path) id 
+     - parameter isLog: (query) isLog 
+
+     - returns: RequestBuilder<CommonResponseOfboolean> 
+     */
+    open class func useMedicineUsingPUTWithRequestBuilder(date: String, _id: String, isLog: Bool) -> RequestBuilder<CommonResponseOfboolean> {
+        var path = "/medicines/{id}"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "date": date, 
+            "isLog": isLog
+        ])
+
+        let requestBuilder: RequestBuilder<CommonResponseOfboolean>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 
 }

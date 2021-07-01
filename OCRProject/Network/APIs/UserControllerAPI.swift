@@ -54,6 +54,46 @@ open class UserControllerAPI {
     }
 
     /**
+     deleteUser
+     
+     - parameter _id: (path) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteUserUsingDELETE(_id: String, completion: @escaping ((_ data: CommonResponseOfboolean?,_ error: Error?) -> Void)) {
+        deleteUserUsingDELETEWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     deleteUser
+     - DELETE /users/{id}
+     - API Key:
+       - type: apiKey Authorization 
+       - name: JWT
+     - examples: [{output=none}]
+     
+     - parameter _id: (path) id 
+
+     - returns: RequestBuilder<CommonResponseOfboolean> 
+     */
+    open class func deleteUserUsingDELETEWithRequestBuilder(_id: String) -> RequestBuilder<CommonResponseOfboolean> {
+        var path = "/users/{id}"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonResponseOfboolean>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      getUserMedicines
      
      - parameter _id: (path) id 

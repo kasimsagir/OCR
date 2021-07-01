@@ -12,24 +12,30 @@ import Foundation
 public struct UserMedicineDAO: Codable {
 
     public var _id: String?
+    public var isCanUse: Bool?
     public var medicineDAO: MedicineDAO
     public var repeatDaily: Int
     public var repeatDay: Int
+    public var used: Int?
     public var userId: String
 
-    public init(_id: String?, medicineDAO: MedicineDAO, repeatDaily: Int, repeatDay: Int, userId: String) {
+    public init(_id: String?, isCanUse: Bool?, medicineDAO: MedicineDAO, repeatDaily: Int, repeatDay: Int, used: Int?, userId: String) {
         self._id = _id
+        self.isCanUse = isCanUse
         self.medicineDAO = medicineDAO
         self.repeatDaily = repeatDaily
         self.repeatDay = repeatDay
+        self.used = used
         self.userId = userId
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case isCanUse
         case medicineDAO
         case repeatDaily
         case repeatDay
+        case used
         case userId
     }
 

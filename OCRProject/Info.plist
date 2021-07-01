@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Medicine Tracking</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +22,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>İlaç isimlerini okuyabilmek için. Daha sonra Ayarlar'dan değiştirilebilir.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Ses tanıma için kullanılacaktır. Daha sonra Ayarlar'dan değiştirilebilir.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Ses tanıma için kullanılacaktır. Daha sonra Ayarlar'dan değiştirilebilir.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -34,17 +47,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>İlaç isimlerini okuyabilmek için. Daha sonra Ayarlar&apos;dan değiştirilebilir.</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Ses tanıma için kullanılacaktır. Daha sonra Ayarlar&apos;dan değiştirilebilir.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Ses tanıma için kullanılacaktır. Daha sonra Ayarlar&apos;dan değiştirilebilir.</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 </dict>

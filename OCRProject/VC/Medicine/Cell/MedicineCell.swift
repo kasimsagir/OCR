@@ -31,8 +31,12 @@ class MedicineCell: UITableViewCell {
     
     
     func setMedicine(_ medicine: UserMedicineDAO){
-        let url = URL(string: medicine.medicineDAO.photoPath)
-        medicineImageView.kf.setImage(with: url)
+        if medicine.medicineDAO.photoPath == "" {
+            medicineImageView.image = UIImage(named: "splash")
+        }else {
+            let url = URL(string: medicine.medicineDAO.photoPath)
+            medicineImageView.kf.setImage(with: url)
+        }
         medicineNameLabel.text = medicine.medicineDAO.name
         medicineBrandLabel.text = medicine.medicineDAO.brand
         medicineSKTLabel.text = medicine.medicineDAO.skt

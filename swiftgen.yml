@@ -1,0 +1,23 @@
+#strings:
+  #inputs: iyzico-merchant-app/SupportingFiles/Strings/en.lproj/Localizable.strings
+  #outputs:
+   # - templateName: structured-swift5
+    #  output: iyzico-merchant-app/SupportingFiles/Strings/L10n.swift
+
+#colors:
+  #inputs: iyzico-merchant-app/SupportingFiles/Colors/Colors.txt
+  #outputs:
+   # templateName: swift5
+    #output: iyzico-merchant-app/SupportingFiles/Colors/Colors.swift
+
+#fonts:
+#  inputs: iyzico-merchant-app/SupportingFiles/Fonts
+#  outputs:
+#    templateName: swift5
+#    output: iyzico-merchant-app/SupportingFiles/Fonts/Fonts.swift
+    
+xcassets:
+  - inputs: OCRProject/Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: OCRProject/SupportingFiles/Asset/Image.swift

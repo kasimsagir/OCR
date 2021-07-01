@@ -7,8 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480C6634268E84C0003403B6 /* AccountControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6631268E84C0003403B6 /* AccountControllerAPI.swift */; };
+		480C6635268E84C0003403B6 /* MedicineControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6632268E84C0003403B6 /* MedicineControllerAPI.swift */; };
+		480C6636268E84C0003403B6 /* UserControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6633268E84C0003403B6 /* UserControllerAPI.swift */; };
+		480C6647268E84D3003403B6 /* CommonResponseOfListOfUserMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6639268E84D2003403B6 /* CommonResponseOfListOfUserMedicineDAO.swift */; };
+		480C6648268E84D3003403B6 /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C663A268E84D2003403B6 /* LoginRequestDTO.swift */; };
+		480C6649268E84D3003403B6 /* MedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C663B268E84D2003403B6 /* MedicineDAO.swift */; };
+		480C664A268E84D3003403B6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C663C268E84D2003403B6 /* CommonResponseOfListOfMedicineDAO.swift */; };
+		480C664B268E84D3003403B6 /* CommonResponseOfUserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C663D268E84D2003403B6 /* CommonResponseOfUserDTO.swift */; };
+		480C664C268E84D3003403B6 /* CommonResponseOfListOfLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C663E268E84D2003403B6 /* CommonResponseOfListOfLogData.swift */; };
+		480C664D268E84D3003403B6 /* UserMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C663F268E84D2003403B6 /* UserMedicineDAO.swift */; };
+		480C664E268E84D3003403B6 /* RegisterRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6640268E84D2003403B6 /* RegisterRequestDTO.swift */; };
+		480C664F268E84D3003403B6 /* AssignUserMedicineRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6641268E84D2003403B6 /* AssignUserMedicineRequestDTO.swift */; };
+		480C6650268E84D3003403B6 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6642268E84D2003403B6 /* UserDTO.swift */; };
+		480C6651268E84D3003403B6 /* CommonResponseOfListOfUserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6643268E84D2003403B6 /* CommonResponseOfListOfUserDTO.swift */; };
+		480C6652268E84D3003403B6 /* CreateMedicineRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6644268E84D2003403B6 /* CreateMedicineRequestDTO.swift */; };
+		480C6653268E84D3003403B6 /* CommonResponseOfboolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6645268E84D2003403B6 /* CommonResponseOfboolean.swift */; };
+		480C6654268E84D3003403B6 /* LogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C6646268E84D2003403B6 /* LogData.swift */; };
 		480D15EB25F7C67100977E95 /* TextRecogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D15EA25F7C67100977E95 /* TextRecogVC.swift */; };
 		480D15EE25F7C68900977E95 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D15ED25F7C68900977E95 /* PreviewView.swift */; };
+		481F3B67268C58FA0060F1E8 /* MedicineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F3B66268C58FA0060F1E8 /* MedicineManager.swift */; };
+		481F3B6B268C6C2D0060F1E8 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F3B6A268C6C2D0060F1E8 /* NotificationVC.swift */; };
+		48264DB426825E5400CBC170 /* NewMedicineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48264DB326825E5400CBC170 /* NewMedicineVC.swift */; };
 		4842597B2563487C00E29E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842597A2563487C00E29E64 /* AppDelegate.swift */; };
 		4842597F2563487C00E29E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842597E2563487C00E29E64 /* ViewController.swift */; };
 		484259822563487C00E29E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484259802563487C00E29E64 /* Main.storyboard */; };
@@ -17,30 +37,18 @@
 		484259922563494100E29E64 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484259912563494100E29E64 /* ScanButton.swift */; };
 		484259952563495500E29E64 /* ScanImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484259942563495500E29E64 /* ScanImageView.swift */; };
 		484259982563496900E29E64 /* OcrTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484259972563496900E29E64 /* OcrTextView.swift */; };
+		48516608265F8F6600997E65 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48516607265F8F6600997E65 /* UIColor.swift */; };
+		4851660D265F8FA800997E65 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4851660C265F8FA800997E65 /* SplashVC.swift */; };
+		48516612265F90FA00997E65 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48516611265F90FA00997E65 /* Image.swift */; };
 		487866FC25F6B37500DEBEE6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487866FB25F6B37500DEBEE6 /* LoginVC.swift */; };
 		4878670125F6B4C300DEBEE6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878670025F6B4C300DEBEE6 /* StringExtension.swift */; };
 		4878670425F6B65F00DEBEE6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878670325F6B65F00DEBEE6 /* AlertView.swift */; };
 		4878670725F6B6D000DEBEE6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878670625F6B6D000DEBEE6 /* RegisterVC.swift */; };
 		4878671425F6BD0400DEBEE6 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671325F6BD0400DEBEE6 /* BaseVC.swift */; };
 		4878673225F6C8C600DEBEE6 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671725F6C8C400DEBEE6 /* CodableHelper.swift */; };
-		4878673325F6C8C600DEBEE6 /* UserControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671925F6C8C400DEBEE6 /* UserControllerAPI.swift */; };
-		4878673425F6C8C600DEBEE6 /* MedicineControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671A25F6C8C400DEBEE6 /* MedicineControllerAPI.swift */; };
-		4878673525F6C8C600DEBEE6 /* AccountControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671B25F6C8C400DEBEE6 /* AccountControllerAPI.swift */; };
 		4878673625F6C8C600DEBEE6 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671C25F6C8C400DEBEE6 /* AlamofireImplementations.swift */; };
 		4878673725F6C8C600DEBEE6 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671D25F6C8C400DEBEE6 /* APIs.swift */; };
 		4878673825F6C8C600DEBEE6 /* JSONEncodableEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878671E25F6C8C500DEBEE6 /* JSONEncodableEncoding.swift */; };
-		4878673925F6C8C600DEBEE6 /* UserMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672025F6C8C500DEBEE6 /* UserMedicineDAO.swift */; };
-		4878673A25F6C8C600DEBEE6 /* CreateMedicineRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672125F6C8C500DEBEE6 /* CreateMedicineRequestDTO.swift */; };
-		4878673B25F6C8C600DEBEE6 /* AssignUserMedicineRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672225F6C8C500DEBEE6 /* AssignUserMedicineRequestDTO.swift */; };
-		4878673C25F6C8C600DEBEE6 /* CommonResponseOfListOfUserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672325F6C8C500DEBEE6 /* CommonResponseOfListOfUserDTO.swift */; };
-		4878673D25F6C8C600DEBEE6 /* MedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672425F6C8C500DEBEE6 /* MedicineDAO.swift */; };
-		4878673E25F6C8C600DEBEE6 /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672525F6C8C500DEBEE6 /* LoginRequestDTO.swift */; };
-		4878673F25F6C8C600DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672625F6C8C500DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift */; };
-		4878674025F6C8C600DEBEE6 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672725F6C8C500DEBEE6 /* UserDTO.swift */; };
-		4878674125F6C8C600DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672825F6C8C500DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift */; };
-		4878674225F6C8C600DEBEE6 /* CommonResponseOfUserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672925F6C8C500DEBEE6 /* CommonResponseOfUserDTO.swift */; };
-		4878674325F6C8C600DEBEE6 /* RegisterRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672A25F6C8C500DEBEE6 /* RegisterRequestDTO.swift */; };
-		4878674425F6C8C600DEBEE6 /* CommonResponseOfboolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672B25F6C8C500DEBEE6 /* CommonResponseOfboolean.swift */; };
 		4878674525F6C8C600DEBEE6 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672C25F6C8C500DEBEE6 /* JSONValue.swift */; };
 		4878674625F6C8C600DEBEE6 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672D25F6C8C500DEBEE6 /* JSONEncodingHelper.swift */; };
 		4878674725F6C8C600DEBEE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878672E25F6C8C500DEBEE6 /* Extensions.swift */; };
@@ -58,8 +66,28 @@
 
 /* Begin PBXFileReference section */
 		0EAB1C511C84F768A8B115D6 /* Pods-OCRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRProject.debug.xcconfig"; path = "Target Support Files/Pods-OCRProject/Pods-OCRProject.debug.xcconfig"; sourceTree = "<group>"; };
+		480C6631268E84C0003403B6 /* AccountControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountControllerAPI.swift; sourceTree = "<group>"; };
+		480C6632268E84C0003403B6 /* MedicineControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineControllerAPI.swift; sourceTree = "<group>"; };
+		480C6633268E84C0003403B6 /* UserControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserControllerAPI.swift; sourceTree = "<group>"; };
+		480C6639268E84D2003403B6 /* CommonResponseOfListOfUserMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfUserMedicineDAO.swift; sourceTree = "<group>"; };
+		480C663A268E84D2003403B6 /* LoginRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
+		480C663B268E84D2003403B6 /* MedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDAO.swift; sourceTree = "<group>"; };
+		480C663C268E84D2003403B6 /* CommonResponseOfListOfMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfMedicineDAO.swift; sourceTree = "<group>"; };
+		480C663D268E84D2003403B6 /* CommonResponseOfUserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfUserDTO.swift; sourceTree = "<group>"; };
+		480C663E268E84D2003403B6 /* CommonResponseOfListOfLogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfLogData.swift; sourceTree = "<group>"; };
+		480C663F268E84D2003403B6 /* UserMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMedicineDAO.swift; sourceTree = "<group>"; };
+		480C6640268E84D2003403B6 /* RegisterRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequestDTO.swift; sourceTree = "<group>"; };
+		480C6641268E84D2003403B6 /* AssignUserMedicineRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignUserMedicineRequestDTO.swift; sourceTree = "<group>"; };
+		480C6642268E84D2003403B6 /* UserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		480C6643268E84D2003403B6 /* CommonResponseOfListOfUserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfUserDTO.swift; sourceTree = "<group>"; };
+		480C6644268E84D2003403B6 /* CreateMedicineRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMedicineRequestDTO.swift; sourceTree = "<group>"; };
+		480C6645268E84D2003403B6 /* CommonResponseOfboolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfboolean.swift; sourceTree = "<group>"; };
+		480C6646268E84D2003403B6 /* LogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogData.swift; sourceTree = "<group>"; };
 		480D15EA25F7C67100977E95 /* TextRecogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecogVC.swift; sourceTree = "<group>"; };
 		480D15ED25F7C68900977E95 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		481F3B66268C58FA0060F1E8 /* MedicineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineManager.swift; sourceTree = "<group>"; };
+		481F3B6A268C6C2D0060F1E8 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		48264DB326825E5400CBC170 /* NewMedicineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMedicineVC.swift; sourceTree = "<group>"; };
 		484259772563487C00E29E64 /* OCRProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4842597A2563487C00E29E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4842597E2563487C00E29E64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,30 +98,18 @@
 		484259912563494100E29E64 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		484259942563495500E29E64 /* ScanImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImageView.swift; sourceTree = "<group>"; };
 		484259972563496900E29E64 /* OcrTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcrTextView.swift; sourceTree = "<group>"; };
+		48516607265F8F6600997E65 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4851660C265F8FA800997E65 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		48516611265F90FA00997E65 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		487866FB25F6B37500DEBEE6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4878670025F6B4C300DEBEE6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4878670325F6B65F00DEBEE6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		4878670625F6B6D000DEBEE6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4878671325F6BD0400DEBEE6 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		4878671725F6C8C400DEBEE6 /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
-		4878671925F6C8C400DEBEE6 /* UserControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserControllerAPI.swift; sourceTree = "<group>"; };
-		4878671A25F6C8C400DEBEE6 /* MedicineControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineControllerAPI.swift; sourceTree = "<group>"; };
-		4878671B25F6C8C400DEBEE6 /* AccountControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountControllerAPI.swift; sourceTree = "<group>"; };
 		4878671C25F6C8C400DEBEE6 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
 		4878671D25F6C8C400DEBEE6 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		4878671E25F6C8C500DEBEE6 /* JSONEncodableEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodableEncoding.swift; sourceTree = "<group>"; };
-		4878672025F6C8C500DEBEE6 /* UserMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMedicineDAO.swift; sourceTree = "<group>"; };
-		4878672125F6C8C500DEBEE6 /* CreateMedicineRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMedicineRequestDTO.swift; sourceTree = "<group>"; };
-		4878672225F6C8C500DEBEE6 /* AssignUserMedicineRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignUserMedicineRequestDTO.swift; sourceTree = "<group>"; };
-		4878672325F6C8C500DEBEE6 /* CommonResponseOfListOfUserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfUserDTO.swift; sourceTree = "<group>"; };
-		4878672425F6C8C500DEBEE6 /* MedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDAO.swift; sourceTree = "<group>"; };
-		4878672525F6C8C500DEBEE6 /* LoginRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
-		4878672625F6C8C500DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfUserMedicineDAO.swift; sourceTree = "<group>"; };
-		4878672725F6C8C500DEBEE6 /* UserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
-		4878672825F6C8C500DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfListOfMedicineDAO.swift; sourceTree = "<group>"; };
-		4878672925F6C8C500DEBEE6 /* CommonResponseOfUserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfUserDTO.swift; sourceTree = "<group>"; };
-		4878672A25F6C8C500DEBEE6 /* RegisterRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequestDTO.swift; sourceTree = "<group>"; };
-		4878672B25F6C8C500DEBEE6 /* CommonResponseOfboolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponseOfboolean.swift; sourceTree = "<group>"; };
 		4878672C25F6C8C500DEBEE6 /* JSONValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
 		4878672D25F6C8C500DEBEE6 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
 		4878672E25F6C8C500DEBEE6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -139,6 +155,22 @@
 			path = TextRecogVC;
 			sourceTree = "<group>";
 		};
+		481F3B69268C6C1E0060F1E8 /* NotificationVC */ = {
+			isa = PBXGroup;
+			children = (
+				481F3B6A268C6C2D0060F1E8 /* NotificationVC.swift */,
+			);
+			path = NotificationVC;
+			sourceTree = "<group>";
+		};
+		48264DB226825E4700CBC170 /* NewMedicine */ = {
+			isa = PBXGroup;
+			children = (
+				48264DB326825E5400CBC170 /* NewMedicineVC.swift */,
+			);
+			path = NewMedicine;
+			sourceTree = "<group>";
+		};
 		4842596E2563487C00E29E64 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +196,7 @@
 				487866C825F6B28C00DEBEE6 /* Network */,
 				484259902563493500E29E64 /* Component */,
 				487866FA25F6B36400DEBEE6 /* VC */,
+				4851660F265F90D400997E65 /* SupportingFiles */,
 				484259802563487C00E29E64 /* Main.storyboard */,
 				4842597A2563487C00E29E64 /* AppDelegate.swift */,
 				484259832563487C00E29E64 /* Assets.xcassets */,
@@ -183,6 +216,30 @@
 				4878671325F6BD0400DEBEE6 /* BaseVC.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		4851660A265F8F9400997E65 /* SplashVC */ = {
+			isa = PBXGroup;
+			children = (
+				4851660C265F8FA800997E65 /* SplashVC.swift */,
+			);
+			path = SplashVC;
+			sourceTree = "<group>";
+		};
+		4851660F265F90D400997E65 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				48516610265F90E300997E65 /* Asset */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		48516610265F90E300997E65 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				48516611265F90FA00997E65 /* Image.swift */,
+			);
+			path = Asset;
 			sourceTree = "<group>";
 		};
 		487866C825F6B28C00DEBEE6 /* Network */ = {
@@ -207,10 +264,13 @@
 		487866FA25F6B36400DEBEE6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				480D15E925F7C65C00977E95 /* TextRecogVC */,
+				481F3B69268C6C1E0060F1E8 /* NotificationVC */,
+				4851660A265F8F9400997E65 /* SplashVC */,
 				4878675325F6CA6300DEBEE6 /* Auth */,
-				4842597E2563487C00E29E64 /* ViewController.swift */,
 				4878675D25F6CC8B00DEBEE6 /* Medicine */,
+				48264DB226825E4700CBC170 /* NewMedicine */,
+				480D15E925F7C65C00977E95 /* TextRecogVC */,
+				4842597E2563487C00E29E64 /* ViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -229,6 +289,7 @@
 		487866FF25F6B4B700DEBEE6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				48516607265F8F6600997E65 /* UIColor.swift */,
 				4878670025F6B4C300DEBEE6 /* StringExtension.swift */,
 				4878676B25F6D13300DEBEE6 /* TableViewExtension.swift */,
 				4878676E25F6D4C100DEBEE6 /* DataExtension.swift */,
@@ -239,9 +300,9 @@
 		4878671825F6C8C400DEBEE6 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				4878671925F6C8C400DEBEE6 /* UserControllerAPI.swift */,
-				4878671A25F6C8C400DEBEE6 /* MedicineControllerAPI.swift */,
-				4878671B25F6C8C400DEBEE6 /* AccountControllerAPI.swift */,
+				480C6631268E84C0003403B6 /* AccountControllerAPI.swift */,
+				480C6632268E84C0003403B6 /* MedicineControllerAPI.swift */,
+				480C6633268E84C0003403B6 /* UserControllerAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -249,18 +310,20 @@
 		4878671F25F6C8C500DEBEE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4878672025F6C8C500DEBEE6 /* UserMedicineDAO.swift */,
-				4878672125F6C8C500DEBEE6 /* CreateMedicineRequestDTO.swift */,
-				4878672225F6C8C500DEBEE6 /* AssignUserMedicineRequestDTO.swift */,
-				4878672325F6C8C500DEBEE6 /* CommonResponseOfListOfUserDTO.swift */,
-				4878672425F6C8C500DEBEE6 /* MedicineDAO.swift */,
-				4878672525F6C8C500DEBEE6 /* LoginRequestDTO.swift */,
-				4878672625F6C8C500DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift */,
-				4878672725F6C8C500DEBEE6 /* UserDTO.swift */,
-				4878672825F6C8C500DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift */,
-				4878672925F6C8C500DEBEE6 /* CommonResponseOfUserDTO.swift */,
-				4878672A25F6C8C500DEBEE6 /* RegisterRequestDTO.swift */,
-				4878672B25F6C8C500DEBEE6 /* CommonResponseOfboolean.swift */,
+				480C6641268E84D2003403B6 /* AssignUserMedicineRequestDTO.swift */,
+				480C6645268E84D2003403B6 /* CommonResponseOfboolean.swift */,
+				480C663E268E84D2003403B6 /* CommonResponseOfListOfLogData.swift */,
+				480C663C268E84D2003403B6 /* CommonResponseOfListOfMedicineDAO.swift */,
+				480C6643268E84D2003403B6 /* CommonResponseOfListOfUserDTO.swift */,
+				480C6639268E84D2003403B6 /* CommonResponseOfListOfUserMedicineDAO.swift */,
+				480C663D268E84D2003403B6 /* CommonResponseOfUserDTO.swift */,
+				480C6644268E84D2003403B6 /* CreateMedicineRequestDTO.swift */,
+				480C6646268E84D2003403B6 /* LogData.swift */,
+				480C663A268E84D2003403B6 /* LoginRequestDTO.swift */,
+				480C663B268E84D2003403B6 /* MedicineDAO.swift */,
+				480C6640268E84D2003403B6 /* RegisterRequestDTO.swift */,
+				480C6642268E84D2003403B6 /* UserDTO.swift */,
+				480C663F268E84D2003403B6 /* UserMedicineDAO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				4878674D25F6C92300DEBEE6 /* UserManager.swift */,
+				481F3B66268C58FA0060F1E8 /* MedicineManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -422,47 +486,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				4878673825F6C8C600DEBEE6 /* JSONEncodableEncoding.swift in Sources */,
-				4878673425F6C8C600DEBEE6 /* MedicineControllerAPI.swift in Sources */,
-				4878673F25F6C8C600DEBEE6 /* CommonResponseOfListOfUserMedicineDAO.swift in Sources */,
+				480C664D268E84D3003403B6 /* UserMedicineDAO.swift in Sources */,
 				4878676125F6CC9C00DEBEE6 /* MedicineCell.swift in Sources */,
 				484259922563494100E29E64 /* ScanButton.swift in Sources */,
+				480C6647268E84D3003403B6 /* CommonResponseOfListOfUserMedicineDAO.swift in Sources */,
 				4878673625F6C8C600DEBEE6 /* AlamofireImplementations.swift in Sources */,
+				480C664B268E84D3003403B6 /* CommonResponseOfUserDTO.swift in Sources */,
 				4878671425F6BD0400DEBEE6 /* BaseVC.swift in Sources */,
+				480C6649268E84D3003403B6 /* MedicineDAO.swift in Sources */,
+				480C6648268E84D3003403B6 /* LoginRequestDTO.swift in Sources */,
+				480C6634268E84C0003403B6 /* AccountControllerAPI.swift in Sources */,
 				480D15EE25F7C68900977E95 /* PreviewView.swift in Sources */,
+				480C6650268E84D3003403B6 /* UserDTO.swift in Sources */,
 				4878670125F6B4C300DEBEE6 /* StringExtension.swift in Sources */,
 				4878670725F6B6D000DEBEE6 /* RegisterVC.swift in Sources */,
 				4878674825F6C8C600DEBEE6 /* APIHelper.swift in Sources */,
+				480C664F268E84D3003403B6 /* AssignUserMedicineRequestDTO.swift in Sources */,
 				4878673225F6C8C600DEBEE6 /* CodableHelper.swift in Sources */,
-				4878674425F6C8C600DEBEE6 /* CommonResponseOfboolean.swift in Sources */,
+				480C6651268E84D3003403B6 /* CommonResponseOfListOfUserDTO.swift in Sources */,
+				480C6653268E84D3003403B6 /* CommonResponseOfboolean.swift in Sources */,
 				4842597F2563487C00E29E64 /* ViewController.swift in Sources */,
-				4878673E25F6C8C600DEBEE6 /* LoginRequestDTO.swift in Sources */,
 				4842597B2563487C00E29E64 /* AppDelegate.swift in Sources */,
-				4878673C25F6C8C600DEBEE6 /* CommonResponseOfListOfUserDTO.swift in Sources */,
-				4878673525F6C8C600DEBEE6 /* AccountControllerAPI.swift in Sources */,
 				484259952563495500E29E64 /* ScanImageView.swift in Sources */,
+				480C6635268E84C0003403B6 /* MedicineControllerAPI.swift in Sources */,
 				4878675525F6CAD700DEBEE6 /* MedicineListVC.swift in Sources */,
 				4878674525F6C8C600DEBEE6 /* JSONValue.swift in Sources */,
 				4878674E25F6C92300DEBEE6 /* UserManager.swift in Sources */,
-				4878673325F6C8C600DEBEE6 /* UserControllerAPI.swift in Sources */,
+				48264DB426825E5400CBC170 /* NewMedicineVC.swift in Sources */,
+				480C6636268E84C0003403B6 /* UserControllerAPI.swift in Sources */,
+				480C664E268E84D3003403B6 /* RegisterRequestDTO.swift in Sources */,
 				4878676C25F6D13300DEBEE6 /* TableViewExtension.swift in Sources */,
+				480C664C268E84D3003403B6 /* CommonResponseOfListOfLogData.swift in Sources */,
+				481F3B67268C58FA0060F1E8 /* MedicineManager.swift in Sources */,
 				484259982563496900E29E64 /* OcrTextView.swift in Sources */,
-				4878673925F6C8C600DEBEE6 /* UserMedicineDAO.swift in Sources */,
+				48516612265F90FA00997E65 /* Image.swift in Sources */,
+				4851660D265F8FA800997E65 /* SplashVC.swift in Sources */,
 				4878676F25F6D4C100DEBEE6 /* DataExtension.swift in Sources */,
 				4878674625F6C8C600DEBEE6 /* JSONEncodingHelper.swift in Sources */,
-				4878674025F6C8C600DEBEE6 /* UserDTO.swift in Sources */,
+				48516608265F8F6600997E65 /* UIColor.swift in Sources */,
 				480D15EB25F7C67100977E95 /* TextRecogVC.swift in Sources */,
-				4878674225F6C8C600DEBEE6 /* CommonResponseOfUserDTO.swift in Sources */,
-				4878674125F6C8C600DEBEE6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */,
 				487866FC25F6B37500DEBEE6 /* LoginVC.swift in Sources */,
+				480C6652268E84D3003403B6 /* CreateMedicineRequestDTO.swift in Sources */,
 				4878675125F6C97600DEBEE6 /* Constant.swift in Sources */,
 				4878670425F6B65F00DEBEE6 /* AlertView.swift in Sources */,
+				480C664A268E84D3003403B6 /* CommonResponseOfListOfMedicineDAO.swift in Sources */,
+				480C6654268E84D3003403B6 /* LogData.swift in Sources */,
 				4878673725F6C8C600DEBEE6 /* APIs.swift in Sources */,
-				4878673A25F6C8C600DEBEE6 /* CreateMedicineRequestDTO.swift in Sources */,
+				481F3B6B268C6C2D0060F1E8 /* NotificationVC.swift in Sources */,
 				4878674A25F6C8C600DEBEE6 /* Configuration.swift in Sources */,
-				4878673D25F6C8C600DEBEE6 /* MedicineDAO.swift in Sources */,
-				4878673B25F6C8C600DEBEE6 /* AssignUserMedicineRequestDTO.swift in Sources */,
 				4878674725F6C8C600DEBEE6 /* Extensions.swift in Sources */,
-				4878674325F6C8C600DEBEE6 /* RegisterRequestDTO.swift in Sources */,
 				4878674925F6C8C600DEBEE6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,14 +684,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YH9484UXC5;
+				DEVELOPMENT_TEAM = 5TH8C5XY6D;
 				INFOPLIST_FILE = OCRProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ks.OCRProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.havucapps.finalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -633,14 +705,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YH9484UXC5;
+				DEVELOPMENT_TEAM = 5TH8C5XY6D;
 				INFOPLIST_FILE = OCRProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ks.OCRProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.havucapps.finalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

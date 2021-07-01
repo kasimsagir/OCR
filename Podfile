@@ -10,5 +10,7 @@ target 'OCRProject' do
   pod 'IQKeyboardManagerSwift'
   pod 'PKHUD', '~> 5.0'
   pod 'Kingfisher', '~> 6.0'
+  pod 'PanModal'
+  pod 'SnapKit', '~> 5.0.0'
   
 end

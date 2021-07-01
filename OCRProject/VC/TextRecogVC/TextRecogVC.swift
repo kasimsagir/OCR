@@ -24,6 +24,10 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
         setupVision()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        deactivateVision()
+    }
+    
     // MARK: - Vision Setup
     func setupVision() {
         let textRequest = VNRecognizeTextRequest(completionHandler: self.textDetectionHandler)
@@ -47,12 +51,17 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
                 DispatchQueue.main.async {
                     self.session.stopRunning()
                     AlertView.show(in: self, title: "Başarılı", message: "Doğru ilaç, lütfen ilacınızı içiniz.") { () -> (Void) in
+                        self.deactivateVision()
                         self.navigationController?.popViewController(animated: true)
                     }
                 }
             }
             
         }
+    }
+    
+    func deactivateVision(){
+        self.requests = []
     }
     
     // MARK: - Draw

@@ -15,9 +15,7 @@ class LoginVC: BaseVC {
     @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
-        if UserManager.shared.savedToken != "" {
-            navigateToMedicineList()
-        }
+
     }
 }
 
@@ -62,6 +60,7 @@ extension LoginVC {
 extension LoginVC {
     func navigateToMedicineList(){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MedicineListVC") as! MedicineListVC
+        vc.modalPresentationStyle = .fullScreen
         self.navigationController?.setViewControllers([vc], animated: true)
     }
 }
