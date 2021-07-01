@@ -16,6 +16,8 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
     private var requests = [VNRequest]()
     private let session = AVCaptureSession()
     var medicine: MedicineDAO?
+    var isFind: Bool = false
+    var isSearching: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,15 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
             // Return the string of the top VNRecognizedText instance.
             return observation.topCandidates(1).first?.string
         }
+        if recognizedStrings != [], !isSearching {
+            isSearching = true
+            DispatchQueue.main.asyncAfter(deadline: .now()+5) { [weak self] in
+                guard let self = self else { return }
+                if !self.isFind {
+                    self.useMedicine(isLog: true)
+                }
+            }
+        }
         print(recognizedStrings)
         if let medicineName = medicine?.name {
             if recognizedStrings.contains(where: { (string) -> Bool in
@@ -50,13 +61,34 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
             }) {
                 DispatchQueue.main.async {
                     self.session.stopRunning()
-                    AlertView.show(in: self, title: "Başarılı", message: "Doğru ilaç, lütfen ilacınızı içiniz.") { () -> (Void) in
+                    self.useMedicine()
+                }
+            }
+            
+        }
+    }
+    
+    func useMedicine(isLog: Bool = false){
+        isFind = true
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let someDateTime = formatter.string(from: Date())
+        MedicineControllerAPI.useMedicineUsingPUT(date: someDateTime, _id: medicine?._id ?? "", isLog: isLog) { [unowned self] (medicineList, error) in
+            if error == nil {
+                if isLog {
+                    AlertView.show(in: self, title: "Uyarı", message: "Yanlış ilaç, doktorunuza iletildi.") { () -> (Void) in
+                        self.deactivateVision()
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }else {
+                    AlertView.show(in: self, title: "Başarılı", message: "Doğru ilaç, lütfen ilacınızı kullanın.") { () -> (Void) in
                         self.deactivateVision()
                         self.navigationController?.popViewController(animated: true)
                     }
                 }
+            }else {
+                AlertView.show(in: self, title: "Uyarı", message: "Bir hata oluştu. \(error?.localizedDescription ?? "")")
             }
-            
         }
     }
     
