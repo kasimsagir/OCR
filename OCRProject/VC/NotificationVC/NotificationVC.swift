@@ -9,11 +9,31 @@ import UIKit
 
 class NotificationVC: UIViewController {
     
-    var notificationList = [
-        "Dikkat 20 Haziran tarihinde Aspirin ilacını almadınız.",
-        "Dikkat 20 Haziran tarihinde hatalı ilaç okuttunuz."
-    ]
+    @IBOutlet weak var tableView: UITableView!
     
+    var notificationList: [LogData] = []
+    
+    override func viewDidLoad() {
+        if !UserManager.isOffline {
+            useMedicine()
+        }
+    }
+    
+    func useMedicine(){
+        MedicineControllerAPI.getLogsUsingGET() { [unowned self] (commonResponse, error) in
+            if error == nil {
+                self.notificationList = commonResponse?.data ?? []
+                tableView.reloadData()
+                if self.notificationList.isEmpty {
+                    self.tableView.showEmptyLabel(message: "Bildirim bulunamadı.", containerView: view)
+                }else {
+                    self.tableView.hideEmptyLabel()
+                }
+            }else {
+                AlertView.show(in: self, title: "Uyarı", message: "Bir hata oluştu. \(error?.localizedDescription ?? "")")
+            }
+        }
+    }
 }
 
 extension NotificationVC: UITableViewDelegate, UITableViewDataSource {
@@ -23,7 +43,8 @@ extension NotificationVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = notificationList[indexPath.row]
+        cell.textLabel?.text = "\(notificationList[indexPath.row].medicineDAO) ilacı için hatalı giriş bulundu. Lütfen tekrar deneyiniz."
+        cell.detailTextLabel?.text = notificationList[indexPath.row].date
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
         cell.textLabel?.numberOfLines = 0

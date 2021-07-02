@@ -13,6 +13,8 @@ class UserManager: NSObject {
     static var shared = UserManager()
     
     // MARK: Generic Propeties
+    static var isOffline: Bool = false
+    
     var savedToken: String {
         return UserDefaults.standard.string(forKey: Constants.UserDefaults.savedToken) ?? ""
     }

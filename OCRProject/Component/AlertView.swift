@@ -10,6 +10,7 @@ import UIKit
 class AlertView {
     
     static func show(in viewController: UIViewController, title: String?, message: String?) {
+        viewController.speechText(message ?? "")
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
         alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil))
         viewController.present(alert, animated: true, completion: nil)
@@ -54,11 +55,11 @@ class AlertView {
         viewController.present(alert, animated: true, completion: nil)
     }
     
-    static func showYesNo(in viewController: UIViewController, title: String?, message: String?, completion : @escaping () -> (Void)) {
+    static func showYesNo(in viewController: UIViewController, title: String?, message: String?, butonTitle: String?, completion : @escaping () -> (Void)) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
-        alert.addAction(UIAlertAction(title: "Hayır", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Evet", style: .default) { action in
+        alert.addAction(UIAlertAction(title: "Vazgeç", style: .cancel))
+        alert.addAction(UIAlertAction(title: butonTitle, style: .default) { action in
             completion()
         })
         

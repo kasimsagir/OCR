@@ -26,6 +26,8 @@ class MedicineListVC: BaseVC {
     }
     var refreshControl = UIRefreshControl()
     var isNavigated: Bool = false
+    var isRemove = false
+    let localMedicines = MedicineManager.shared.getAllObjects
     
     override func viewDidLoad() {
         navigationItem.title = "İlaçlarım"
@@ -38,7 +40,9 @@ class MedicineListVC: BaseVC {
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
         refreshControl.beginRefreshing()
-        getMedicineList()
+        if !UserManager.isOffline {
+            getMedicineList()
+        }
         setupSpeechRecognizer()
         
         DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
@@ -123,10 +127,10 @@ extension MedicineListVC {
 //                    self.speechText("Hiç ilaç bulunamadı. İlaç eklemesi için doktorunuzla iletişime geçiniz.")
                     self.tableView.showEmptyLabel(message: "Hiç ilaç bulunamadı. İlaç eklemesi için doktorunuzla iletişime geçiniz.", containerView: self.tableView)
                 }else {
-                    let medicineString = self.medicineList.map { (medicine) -> String in
-                        return medicine.medicineDAO.name ?? ""
-                    }.joined(separator: ", ")
-//                    self.speechText("\(self.medicineList.count) adet ilaç bulundu. \(medicineString). Kameraya tanıtmak için ilacın ismini söyleyin.")
+//                    let medicineString = self.medicineList.map { (medicine) -> String in
+//                        return medicine.medicineDAO.name ?? ""
+//                    }.joined(separator: ", ")
+                    self.speechText("\(self.medicineList.count) adet ilaç bulundu. Kameraya tanıtmak için ilacın ismini söyleyin.")
                     self.tableView.hideEmptyLabel()
                 }
             }else {
@@ -144,14 +148,7 @@ extension MedicineListVC {
         self.requestSpeechAuthorization()
     }
     
-    func speechText(_ speechText: String){
-//        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-        let speechSynthesizer = AVSpeechSynthesizer()
-        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: speechText)
-        speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 3.0
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "tr-TR")
-        speechSynthesizer.speak(speechUtterance)
-    }
+
     
     //MARK: - Recognize Speech
     func recordAndRecognizeSpeech() {
@@ -196,9 +193,24 @@ extension MedicineListVC {
     
     func checkForColorsSaid(resultString: String) {
         print("SONUÇ: \(resultString)")
+        if resultString == "vazgeç" || resultString == "Vazgeç" {
+            isRemove = false
+        }
+        if isRemove {
+            if let medicine = findLocalMedicines(resultString), medicine != "" {
+                isRemove = false
+                removeWarning(medicine: medicine)
+            }
+        }
         if resultString == "yeni" || resultString == "Yeni" {
             cancelRecording()
             navigateToNewMedicine()
+        }
+        if resultString == "çıkış" || resultString == "Çıkış" {
+            logout()
+        }
+        if resultString == "sil" || resultString == "Sil" {
+            removeMedicine()
         }
         let selectedMedicine = medicineList.filter { (medicine) -> Bool in
             return medicine.medicineDAO.name?.lowercased() == resultString.lowercased()
@@ -207,6 +219,41 @@ extension MedicineListVC {
             cancelRecording()
             navigateToOCR(selectedMedicine.first?.medicineDAO)
         }
+    }
+    
+    func logout(){
+        self.speechText("Çıkış yapmak istediğinize emin misiniz?")
+        AlertView.showYesNo(in: self, title: "Uyarı", message: "Çıkış yapmak istediğinize emin misiniz?", butonTitle: "Çıkış Yap") { () -> (Void) in
+            UserManager.shared.saveToken("")
+            UserManager.shared.saveUser("", "", "", "", "")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+            self.navigationController?.setViewControllers([vc], animated: true)
+        }
+    }
+    
+    func removeMedicine() {
+        AlertView.show(in: self, title: "Bilgi", message: "Silmek istediğiniz ilacın ismini söyleyiniz?")
+        isRemove = true
+    }
+    
+    func removeWarning(medicine: String){
+        self.speechText("Silmek istediğiniz ilacın ismini söyleyiniz?")
+        AlertView.showYesNo(in: self, title: "Uyarı", message: "\(medicine), ilacını silmek istediğinize emin misiniz?", butonTitle: "Sil") { () -> (Void) in
+            let temp = MedicineManager.shared.getAllObjects
+            let removedList = temp.filter { (user) -> Bool in
+                return user.medicineDAO.name != medicine
+            }
+            MedicineManager.shared.saveAllObjects(allObjects: removedList)
+        }
+    }
+    
+    func findLocalMedicines(_ medicineName: String)-> String?{
+        for item in localMedicines {
+            if item.medicineDAO.name?.uppercased() == medicineName.uppercased() {
+                return medicineName
+            }
+        }
+        return nil
     }
     
     func cancelRecording() {
@@ -288,5 +335,16 @@ extension MedicineListVC: NewMedicineVCDelegate {
             self.presentPanModal(vc)
         }
         
+    }
+}
+
+extension UIViewController {
+    func speechText(_ speechText: String){
+        //        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+        let speechSynthesizer = AVSpeechSynthesizer()
+        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: speechText)
+        speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 3.0
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "tr-TR")
+        speechSynthesizer.speak(speechUtterance)
     }
 }

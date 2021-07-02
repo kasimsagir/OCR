@@ -69,25 +69,39 @@ class TextRecogVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegat
     }
     
     func useMedicine(isLog: Bool = false){
-        isFind = true
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let someDateTime = formatter.string(from: Date())
-        MedicineControllerAPI.useMedicineUsingPUT(date: someDateTime, _id: medicine?._id ?? "", isLog: isLog) { [unowned self] (medicineList, error) in
-            if error == nil {
-                if isLog {
-                    AlertView.show(in: self, title: "Uyarı", message: "Yanlış ilaç, doktorunuza iletildi.") { () -> (Void) in
-                        self.deactivateVision()
-                        self.navigationController?.popViewController(animated: true)
-                    }
-                }else {
-                    AlertView.show(in: self, title: "Başarılı", message: "Doğru ilaç, lütfen ilacınızı kullanın.") { () -> (Void) in
-                        self.deactivateVision()
-                        self.navigationController?.popViewController(animated: true)
-                    }
+        if UserManager.isOffline {
+            if isLog {
+                AlertView.show(in: self, title: "Uyarı", message: "Yanlış ilaç, lütfen tekrar deneyiniz.") { () -> (Void) in
+                    self.deactivateVision()
+                    self.navigationController?.popViewController(animated: true)
                 }
             }else {
-                AlertView.show(in: self, title: "Uyarı", message: "Bir hata oluştu. \(error?.localizedDescription ?? "")")
+                AlertView.show(in: self, title: "Başarılı", message: "Doğru ilaç, lütfen ilacınızı kullanın.") { () -> (Void) in
+                    self.deactivateVision()
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        } else {
+            isFind = true
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            let someDateTime = formatter.string(from: Date())
+            MedicineControllerAPI.useMedicineUsingPUT(date: someDateTime, _id: medicine?._id ?? "", isLog: isLog) { [unowned self] (medicineList, error) in
+                if error == nil {
+                    if isLog {
+                        AlertView.show(in: self, title: "Uyarı", message: "Yanlış ilaç, doktorunuza iletildi.") { () -> (Void) in
+                            self.deactivateVision()
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }else {
+                        AlertView.show(in: self, title: "Başarılı", message: "Doğru ilaç, lütfen ilacınızı kullanın.") { () -> (Void) in
+                            self.deactivateVision()
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                }else {
+                    AlertView.show(in: self, title: "Uyarı", message: "Bir hata oluştu. \(error?.localizedDescription ?? "")")
+                }
             }
         }
     }

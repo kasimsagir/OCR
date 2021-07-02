@@ -537,6 +537,9 @@
                             <constraint firstItem="yiB-Qk-Wjd" firstAttribute="top" secondItem="WYE-8l-wbd" secondAttribute="top" id="zd1-hK-CTb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yiB-Qk-Wjd" id="K9g-jz-hkf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PmF-d6-uv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
